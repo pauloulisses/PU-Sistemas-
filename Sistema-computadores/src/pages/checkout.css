@@ -1,0 +1,113 @@
+body {
+  font-family: sans-serif;
+}
+
+img {
+  width: 180px;
+}
+
+button:hover {
+  background-color: #454ea0;
+}
+
+/* Container principal */
+.checkout-container {
+  max-width: 400px;
+  margin: 40px auto;
+}
+
+/* Card de cada serviço */
+.checkout-card {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 24px 20px 20px 20px;
+  margin-bottom: 32px;
+  background: #fff;
+  box-shadow: 0 2px 8px #0001;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Imagem do serviço */
+.checkout-img {
+  width: 160px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  display: block;
+}
+
+/* Título do serviço */
+.checkout-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+/* Valor em R$ */
+.checkout-valor {
+  display: block;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #111;
+}
+
+/* Área dos botões de quantidade */
+.checkout-quantidade {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+/* Botões de + e - */
+.checkout-btn {
+  width: 36px;
+  height: 36px;
+  font-size: 20px;
+  border-radius: 4px;
+  padding: 0;
+  margin: 0 8px;
+  border: none;
+  background: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.checkout-btn:hover {
+  background: #0056b3;
+}
+
+/* Número da quantidade */
+.checkout-num {
+  min-width: 32px;
+  text-align: center;
+  font-weight: bold;
+  color: #111;
+  font-size: 1.1rem;
+}
+
+/* Botão adicionar ao carrinho */
+.button-adicionar {
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 4px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.button-adicionar:hover {
+  background: #0056b3;
+}
