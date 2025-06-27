@@ -1,12 +1,36 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../components/Headear";
 import { Card, Button, Row, Col, Container, Badge } from "react-bootstrap";
 import { servicosManutencao } from "../mocks/servicos";
 
 function Home() {
+  const [logado, setLogado] = useState(false);
+
+  useEffect(() => {
+    const usuario = localStorage.getItem("usuario");
+    setLogado(!!usuario);
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem("usuario");
+    setLogado(false);
+    window.location.reload();
+  };
+
   return (
     <>
-      <Header />
+      <Header>
+        {logado && (
+          <Button
+            variant="outline-danger"
+            className="ms-3"
+            onClick={handleLogout}
+            style={{ float: "right" }}
+          >
+            Sair
+          </Button>
+        )}
+      </Header>
       <Container className="mt-4">
         <Row>
           {servicosManutencao.map((servico) => (

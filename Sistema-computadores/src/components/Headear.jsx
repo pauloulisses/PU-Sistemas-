@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Navbar, Nav, Container, Form, FormControl, Button } from "react-bootstrap";
 import "./header.css";
 
-function Header() {
+function Header({ hideLogin, children }) {
   return (
     <header>
       <Navbar bg="light" expand="lg">
@@ -12,7 +12,9 @@ function Header() {
           <Navbar.Toggle aria-controls="navbarSupportedContent" />
           <Navbar.Collapse id="navbarSupportedContent">
             <Nav className="ms-auto mb-2 mb-lg-0">
-              <Nav.Link as={Link} to="/login">LOGIN</Nav.Link>
+              {!hideLogin && (
+                <Nav.Link as={Link} to="/login">LOGIN</Nav.Link>
+              )}
               <Nav.Link as={Link} to="/checkout">CHECKOUT</Nav.Link>
             </Nav>
             <Form className="d-flex ms-3" role="search">
@@ -26,6 +28,8 @@ function Header() {
                 pesquisar
               </Button>
             </Form>
+            {/* Adicione esta linha para renderizar os filhos */}
+            {children}
           </Navbar.Collapse>
         </Container>
       </Navbar>
